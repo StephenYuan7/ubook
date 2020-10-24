@@ -12,6 +12,11 @@ from app.libs.error_code import ServerError
 app = create_app()
 
 
+@app.route('/')
+def hello_world():
+    return render_template("hello.html")
+
+
 # 全局异常处理
 @app.errorhandler(Exception)
 def framework_error(e):
