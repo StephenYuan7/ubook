@@ -10,4 +10,6 @@ def register_blueprints(app):
 def create_app():
     # __name__为当前文件
     app = Flask(__name__)
+
+    register_blueprints(app)
     return app
